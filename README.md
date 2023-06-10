@@ -1,4 +1,4 @@
-# GISOGD RF
+## GISOGD RF
 For run tests:
-1. `pip install selenium`
-2. `pip install pytest`
+1. `pip install pytest-selenium`
+2. `python -m pytest -v --driver Chrome --driver-path chromedriver.exe tests\RNTD_tests.py`
