@@ -1,4 +1,3 @@
-import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -6,11 +5,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 
 
-# Создаем объект Web Driver + игнорируем ошибку сертификата SSL
+# Создаем объект Web Driver + добавляем опцию игнорирования ошибки сертификата SSL
 def get_driver():
     options = webdriver.ChromeOptions()
     options.add_argument('ignore-certificate-errors')
-    driver = webdriver.Chrome(chrome_options=options)
+    driver = webdriver.Chrome(options)
     driver.get('https://gisogd.gov.ru/rntd')
     driver.maximize_window()
     wait = WebDriverWait(driver, 30)
