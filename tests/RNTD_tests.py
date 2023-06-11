@@ -29,7 +29,7 @@ def test_form_with_name():
     # Нажимаем на кнопку Найти
     wait.until(
         EC.presence_of_element_located((By.CLASS_NAME, "g-a11y-btn--primary"))).click()
-    # Ожидаем загрузки списка документа
+    # Ожидаем загрузки списка документов
     wait.until(
         EC.presence_of_element_located((By.XPATH, "//article['.g-a11y-card-bg']")))
     # Подсчитываем количетво наденных элементов
@@ -63,7 +63,7 @@ def test_form_with_number_and_strict():
     # Нажимаем на кнопку Найти
     wait.until(
         EC.presence_of_element_located((By.CLASS_NAME, "g-a11y-btn--primary"))).click()
-    # Ожидаем загрузки списка документа
+    # Ожидаем загрузки списка документов
     wait.until(
         EC.presence_of_element_located((By.XPATH, "//article['.g-a11y-card-bg']")))
     # Подсчитываем количетво наденных элементов
