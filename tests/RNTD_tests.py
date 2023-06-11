@@ -9,7 +9,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 def get_driver():
     options = webdriver.ChromeOptions()
     options.add_argument('ignore-certificate-errors')
-    driver = webdriver.Chrome(options)
+    driver = webdriver.Chrome(options=options)
     driver.get('https://gisogd.gov.ru/rntd')
     driver.maximize_window()
     wait = WebDriverWait(driver, 30)
